@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.kafka</groupId>
+		<artifactId>SpringBootForKafka</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath> <!-- Ruta relativa al pom.xml del padre -->
+	</parent>
+
+	<groupId>com.kafka</groupId> <!-- Se hereda del padre, pero se puede definir explícitamente si se desea un groupId diferente -->
+	<artifactId>SpringBootConsumer</artifactId>
+	<version>0.0.1-SNAPSHOT</version> <!-- Se hereda del padre, pero se puede definir explícitamente -->
+	<name>SpringBootConsumer</name>
+	<description>Kafka for spring boot</description>
+
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+
+	<properties>
+		<!-- java.version se hereda del padre, no es necesario aquí a menos que quieras una versión diferente -->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- La versión se gestiona por spring-boot-starter-parent y/o por dependencyManagement del padre -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<!-- La versión se gestiona por dependencyManagement del padre -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<!-- La versión se gestiona por spring-boot-starter-parent y/o por dependencyManagement del padre -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+			<!-- La versión se gestiona por dependencyManagement del padre -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<!-- La versión se gestiona por spring-boot-starter-parent y/o por dependencyManagement del padre -->
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
